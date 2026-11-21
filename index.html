@@ -10,13 +10,14 @@
     background-image: url("sprites/banner.png");
     background-size: 1px;
     background-size: cover;
+    background-size: 100% 100%;
     image-rendering: pixelated;
     min-height: 184px;
     min-width: 284px;
   }
   .grid {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: repeat(auto-fill, 284px);
     gap: 1rem;
   }
   @font-face {
