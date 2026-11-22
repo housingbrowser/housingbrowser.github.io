@@ -50,8 +50,11 @@
 <body>
   <p>Housing Browser</p>
   <div class="grid" id="grid">
+    <button id="loadmore" onclick="fetchHouses()">Load More </button>
   <script>
-  fetch("https://host1.creepernet.qzz.io/c8ee103f/api/houses")
+  let page = 0;
+  function fetchHouses() {
+  fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/houses?page=${page}&limit=10`)
     .then(response => response.json())
     .then(data => {
       const grid = document.getElementById("grid");
@@ -61,7 +64,10 @@
         box.textContent = h.name;
         grid.appendChild(box);
       }
+      grid.appendChild(document.getElementById("loadmore"));
+      page++;
     });
+  }
   </script>
 </body>
 </html>
