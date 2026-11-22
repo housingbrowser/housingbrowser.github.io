@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +65,7 @@
   <div class="house"></div>
   <div class="house"></div>
   <div class="house"></div>
-  <div class="house"></div>
+  <div class="house"></div
   <div class="house"></div>
   <div class="house"></div>
   <div class="house"></div>
@@ -78,5 +79,10 @@
   <div class="house"></div>
   <div class="house"></div>
   </div>
+  <script>
+  fetch("https://host1.creepernet.qzz.io/c8ee103f/api/houses")
+    .then(response => response.json())
+    .then(houses => console.log(houses));
+  </script>
 </body>
 </html>
