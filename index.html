@@ -49,40 +49,17 @@
 </head>
 <body>
   <p>Housing Browser</p>
-  <div class="grid">
-  <div class="house">
-  test
-  </div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house">
-  Green House
-  </div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  <div class="house"></div>
-  </div>
+  <div class="grid"></div>
   <script>
   fetch("https://host1.creepernet.qzz.io/c8ee103f/api/houses")
     .then(response => response.json())
-    .then(houses => console.log(houses));
+    .then(data => {
+      const grid = document.getElementById("grid");
+      for (const h of data.houses) {
+        const box = document.createElement("div");
+        box.className = "house";
+        box.textContent = h.name;
+        grid.appendChild(box);
   </script>
 </body>
 </html>
