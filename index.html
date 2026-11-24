@@ -2,49 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="favicon.ico?v=5" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico?v=8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Housing Browser</title>
   <style>
-  .house {
-    background-image: url("sprites/banner.png");
-    background-size: 1px;
-    background-size: cover;
-    background-size: 100% 100%;
-    image-rendering: pixelated;
-    min-height: 184px;
-    min-width: 284px;
-    box-sizing: border-box;
-    padding: .5rem 1rem;
-    color: #ffffff;
-    font-size: 20px;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 284px);
-    gap: 1rem;
-    justify-content: center;
-  }
-  @font-face {
-    font-family: "Minecraft";
-    src: url("fonts/MinecraftDefault-Regular.ttf");
-    font-weight: normal;
-  }
-
-  @font-face {
-    font-family: "Minecraft";
-    src: url("fonts/MinecraftDefault-Bold.ttf");
-    font-weight: bold;
-  }
-  img {
-    image-rendering: pixelated;
-  }
-  body {
-    background-color: #A4E1F0;
-    font-family: "Minecraft", monospace;
-    font-size: 30px;
-  }
   </style>
 </head>
 <body>
@@ -70,17 +33,20 @@
   <script>
   let page = 0;
   function fetchHouses() {
-  fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/houses?page=${page}&limit=10`)
-    .then(response => response.json())
-    .then(data => {
-      const grid = document.getElementById("grid");
-      for (const h of data.houses) {
-        const box = document.createElement("div");
-        box.className = "house";
-        box.textContent = h.name;
-        grid.appendChild(box);
-      }
+    const button = document.getElementById("loadmore");
+    button.style.backgroundImage = "url('buttons/load/bdown.png')";
+    fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/houses?page=${page}&limit=10`)
+      .then(response => response.json())
+      .then(data => {
+        const grid = document.getElementById("grid");
+        for (const h of data.houses) {
+          const box = document.createElement("div");
+          box.className = "house";
+          box.textContent = h.name;
+          grid.appendChild(box);
+        }
       grid.appendChild(document.getElementById("loadmore"));
+      button.style.backgroundImage = "url('buttons/load/bup.png')";
       page++;
     });
   }
