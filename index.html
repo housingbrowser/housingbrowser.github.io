@@ -50,7 +50,23 @@
 <body>
   <p>Housing Browser</p>
   <div class="grid" id="grid">
-    <button id="loadmore" onclick="fetchHouses()">Load More </button>
+    <button
+      id="loadmore"
+      onclick="fetchHouses()"
+      style="
+      aspect-ratio:  68 / 14;
+      background-image:url('buttons/load/bup.png');
+      background-size: contain;
+      image-rendering: pixelated;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+      width: 125px;
+      appearance: none;
+      outline: none;
+      box-shadow: none;
+      ">
+    </button>
   <script>
   let page = 0;
   function fetchHouses() {
