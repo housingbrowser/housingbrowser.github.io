@@ -15,8 +15,8 @@ export function setMinecraftColors(element, text) {
   let currentColor = '#55FF55';
   let bold = false;
 //This section detects color codes [0-9a-f] are the color code colors-->
-  text.split(/(ค[0-9a-fk-or])/gi).forEach(part => {
-      if (/^ค[0-9a-fk-or]$/i.test(part)) {
+  text.split(/(ยง[0-9a-fk-or])/gi).forEach(part => {
+      if (/^ยง[0-9a-fk-or]$/i.test(part)) {
           const code = part[1].toLowerCase();
           if (colors[code]) {
             currentColor = colors[code];
