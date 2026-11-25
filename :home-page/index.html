@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" href="favicon.ico?v=8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
       onclick="fetchHouses()"
       style="
       aspect-ratio:  68 / 14;
-      background-image:url('buttons/load/bup.png');
+      background-image:url('assets/buttons/load/bup.png');
       background-size: contain;
       image-rendering: pixelated;
       background-repeat: no-repeat;
@@ -55,7 +55,7 @@
   function fetchHouses() {
     <!--Define Variables-->
     const seed = Math.floor(Math.random() * 1000000000);
-    button.style.backgroundImage = "url('buttons/load/bdown.png')";
+    button.style.backgroundImage = "url('assets/buttons/load/bdown.png')";
 
     <!--Actual Function-->
     fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/homepage?seed=${seed}&page=${page}&limit=10`)
@@ -87,7 +87,7 @@
           grid.appendChild(box);
         }
       grid.appendChild(document.getElementById("loadmore"));
-      button.style.backgroundImage = "url('buttons/load/bup.png')";
+      button.style.backgroundImage = "url('assets/buttons/load/bup.png')";
       page++;
     });
   }
