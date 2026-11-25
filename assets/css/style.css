@@ -42,7 +42,7 @@ body {
     width: 125px;
     aspect-ratio: 68 / 14;
 
-    background-image: url("assets/buttons/load/bup.png");
+    background-image: url("/assets/buttons/load/bup.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,5 +58,5 @@ body {
 }
 
 #loadmore:active {
-    background-image: url("assets/buttons/load/bdown.png");
+    background-image: url("/assets/buttons/load/bdown.png");
 }
