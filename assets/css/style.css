@@ -1,5 +1,5 @@
 .house {
-  background-image: url("assets/sprites/banner.png");
+  background-image: url("https://housingbrowser.github.io/assets/sprites/banner.png");
   background-size: 1px;
   background-size: cover;
   background-size: 100% 100%;
@@ -19,13 +19,13 @@
 }
 @font-face {
   font-family: "Minecraft";
-  src: url("assets/fonts/MinecraftDefault-Regular.ttf");
+  src: url("https://housingbrowser.github.io/assets/fonts/MinecraftDefault-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Minecraft";
-  src: url("assets/fonts/MinecraftDefault-Bold.ttf");
+  src: url("https://housingbrowser.github.io/assets/fonts/MinecraftDefault-Bold.ttf");
   font-weight: bold;
 }
 img {
