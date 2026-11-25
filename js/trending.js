@@ -23,7 +23,7 @@ async function getMinecraftUsername(uuid) {
 
 function fetchTrending() {
   // Define Variables
-  button.style.backgroundImage = "url('assets/buttons/load/bdown.png')";
+  button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bdown.png')";
 
   // Actual Function
   fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/trending?&page=${page}&limit=10`)
@@ -53,7 +53,7 @@ function fetchTrending() {
         grid.appendChild(box);
       }
     grid.appendChild(document.getElementById("loadmore"));
-    button.style.backgroundImage = "url('assets/buttons/load/bup.png')";
+    button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bup.png')";
     page++;
   });
 }

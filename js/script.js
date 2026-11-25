@@ -24,7 +24,7 @@ const button = document.getElementById("loadmore");
 function fetchHomePage() {
   // Define Variables
   const seed = Math.floor(Math.random() * 1000000000);
-  button.style.backgroundImage = "url('assets/buttons/load/bdown.png')";
+  button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bdown.png')";
 
   // Actual Function
   fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/homepage?seed=${seed}&page=${page}&limit=10`)
@@ -54,7 +54,7 @@ function fetchHomePage() {
         grid.appendChild(box);
       }
     grid.appendChild(document.getElementById("loadmore"));
-    button.style.backgroundImage = "url('/assets/buttons/load/bup.png')";
+    button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bup.png')";
     page++;
   });
 }
