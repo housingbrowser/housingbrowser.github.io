@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="favicon.ico?v=8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +39,7 @@
             `https://mc-api.io/name/${uuid}`
         );
 
-        if (!response.ok) return "Unknown Player";
+        if (!response.ok) return "???";
 
         const data = await response.json();
         return data.name;
@@ -109,8 +109,8 @@
     let currentColor = '#FFFFFF';
     let bold = false;
 //This section detects color codes [0-9a-f] are the color code colors-->
-    text.split(/(ยง[0-9a-fk-or])/gi).forEach(part => {
-        if (/^ยง[0-9a-fk-or]$/i.test(part)) {
+    text.split(/(ค[0-9a-fk-or])/gi).forEach(part => {
+        if (/^ค[0-9a-fk-or]$/i.test(part)) {
             const code = part[1].toLowerCase();
             currentColor = colors[part[1].toLowerCase()];
             if (colors[code]) {
