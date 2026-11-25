@@ -80,7 +80,7 @@
           owner.textContent = "Fetching Data";
 
           getMinecraftUsername(h.owner_uuid).then(username => {
-            owner.textContent = "/visit" + username;
+            owner.textContent = "/visit " + username;
           });
 
           box.append(housename, owner);
