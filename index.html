@@ -39,7 +39,7 @@
             `https://mc-api.io/name/${uuid}`
         );
 
-        if (!response.ok) return "???";
+        if (!response.ok) return "??";
 
         const data = await response.json();
         return data.name;
