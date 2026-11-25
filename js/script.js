@@ -59,5 +59,43 @@ function fetchHomePage() {
   });
 }
 
+function fetchTrending() {
+  // Define Variables
+  button.style.backgroundImage = "url('assets/buttons/load/bdown.png')";
+
+  // Actual Function
+  fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/trending?&page=${page}&limit=10`)
+    .then(response => response.json())
+    // Process the Data
+    .then(data => {
+      const grid = document.getElementById("grid");
+
+      for (const h of data.houses) {
+        const box = document.createElement("div");
+          box.className = "house";
+        // House Name
+        const housename = document.createElement("div");
+        housename.className = "housename";
+        setMinecraftColors(housename, h.name)
+
+        // Owner
+        const owner = document.createElement("div");
+        owner.className = "owner";
+        owner.textContent = "Fetching Data";
+
+        getMinecraftUsername(h.owner_uuid).then(username => {
+          owner.textContent = "/visit " + username;
+        });
+
+        box.append(housename, owner);
+        grid.appendChild(box);
+      }
+    grid.appendChild(document.getElementById("loadmore"));
+    button.style.backgroundImage = "url('assets/buttons/load/bup.png')";
+    page++;
+  });
+}
+
 // Add this to make it callable
 window.fetchHomePage = fetchHomePage;
+window.fetchTrending = fetchTrending;
