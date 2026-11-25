@@ -54,7 +54,7 @@ function fetchHomePage() {
         grid.appendChild(box);
       }
     grid.appendChild(document.getElementById("loadmore"));
-    button.style.backgroundImage = "url('assets/buttons/load/bup.png')";
+    button.style.backgroundImage = "url('/assets/buttons/load/bup.png')";
     page++;
   });
 }
