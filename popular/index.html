@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://housingbrowser.github.io/assets/css/style.css">
+  <link rel="icon" href="/favicon.ico?v=8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HB: Trending</title>
+  <style>
+  </style>
+</head>
+<body>
+  <p>Housing Browser</p>
+  <section id="pageselect">
+
+  <button
+    id="home"
+    onclick="window.location.href='/homepage/';"
+    style="
+    aspect-ratio:  68 / 14;
+    background-image:url('https://housingbrowser.github.io/assets/buttons/home/HomeButtonUp.png');
+    ">
+  </button>
+
+    <button
+      id="trending"
+      onclick="window.location.href='/trending/';"
+      style="
+      aspect-ratio:  68 / 14;
+      background-image:url('https://housingbrowser.github.io/assets/buttons/trending/TrendingButtonUp.png');
+      ">
+    </button>
+
+  </button>
+
+    <button
+      id="popular"
+      style="
+      aspect-ratio:  68 / 14;
+      background-image:url('https://housingbrowser.github.io/assets/buttons/popular/PopularButtonDown.png');
+      ">
+    </button>
+
+    </section>
+    <section id="houses">
+  <div class="grid" id="grid">
+    <button
+      id="loadmore"
+      onclick="fetchTrending()"
+      style="
+      display: flex;
+      gap: 10px;
+      aspect-ratio:  68 / 14;
+      align-items: center;
+      background-image:url('https://housingbrowser.github.io/assets/buttons/load/bup.png');
+      background-size: contain;
+      image-rendering: pixelated;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+      width: 140px;
+      appearance: none;
+      outline: none;
+      box-shadow: none;
+      ">
+    </button>
+  <script type="module" src="/js/trending.js"></script>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    fetchTrending();
+  });
+  </script>
+  </section>
+</body>
+</html>
