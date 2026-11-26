@@ -67,15 +67,23 @@ body {
 }
 
 #pageselect button {
-    all: unset;
     display: block;
     width: 125px;
-    height: 26px;
+    aspect-ratio: 68 / 14;
+
+    background-color: transparent;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+
     image-rendering: pixelated;
-    cursor: pointer;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
 }
 #home {
     background-image: url("https://housingbrowser.github.io/assets/buttons/home/HomeButtonUp.png") !important;
