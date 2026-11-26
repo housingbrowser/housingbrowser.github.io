@@ -67,7 +67,6 @@ body {
 }
 
 #pageselect button {
-    all: unset !important;
 
     display: block !important;
     width: 125px !important;
