@@ -60,3 +60,31 @@ body {
 #loadmore:active {
     background-image: url("/assets/buttons/load/bdown.png");
 }
+
+
+#pageselect {
+  margin-bottom: 200px;
+}
+
+#pageselect button {
+    all: unset !important;
+
+    display: block !important;
+    width: 125px !important;
+    aspect-ratio: 68 / 14 !important;
+
+    background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+
+    image-rendering: pixelated;
+    cursor: pointer;
+}
+#home {
+    background-image: url("https://housingbrowser.github.io/assets/buttons/home/HomeButtonUp.png") !important;
+}
+
+#trending {
+    background-image: url("https://housingbrowser.github.io/assets/buttons/trending/TrendingButtonDown.png") !important;
+}
