@@ -89,10 +89,3 @@ body {
     -webkit-appearance: none;
     padding: 0;
 }
-#home {
-    background-image: url("https://housingbrowser.github.io/assets/buttons/home/HomeButtonUp.png") !important;
-}
-
-#trending {
-    background-image: url("https://housingbrowser.github.io/assets/buttons/trending/TrendingButtonDown.png") !important;
-}
