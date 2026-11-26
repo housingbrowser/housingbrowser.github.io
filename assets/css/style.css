@@ -67,16 +67,13 @@ body {
 }
 
 #pageselect button {
-    all: unset !important;
-    display: block !important;
-    width: 25px !important;
-    aspect-ratio: 68 / 14 !important;
-
-    background-color: transparent !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: 100% 100% !important;
-
+    all: unset;
+    display: block;
+    width: 125px;
+    height: 26px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     image-rendering: pixelated;
     cursor: pointer;
 }
