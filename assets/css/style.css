@@ -67,6 +67,7 @@ body {
   display: flex;
   gap: 10px;
   background-color: #C8CFD5;
+  padding: 5px;
 }
 
 #pageselect button {
