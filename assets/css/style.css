@@ -100,3 +100,24 @@ body {
   background-color: #C8CFD5;
   padding: 5px;
 }
+
+
+#searchbutton {
+  background-image: url("/assets/buttons/search/searchusable");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  image-rendering: pixelated;
+
+}
+
+#resetsearch {
+  background-image: url("/assets/buttons/search/reset");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  image-rendering: pixelated;
+
+}
