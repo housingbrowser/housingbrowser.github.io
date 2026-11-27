@@ -112,6 +112,13 @@ body {
   height: 25px;
   width: 25px;
 
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+
 }
 
 #resetsearch {
@@ -123,4 +130,20 @@ body {
   image-rendering: pixelated;
   height: 25px;
   width: 25px;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+}
+
+#searchinput {
+  font-family: "Minecraft", sans-serif;
+  background: url("/assets/buttons/search/searchbar.png");
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
 }
