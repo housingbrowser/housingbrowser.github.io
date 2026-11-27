@@ -56,7 +56,10 @@
     <section id="wigitbar">
 
     <input type="text" placeholder="ᴛᴇʀᴍ" id=searchinput>
-    <button onclick="fetchTerm(document.getElementById('searchinput').value)" id="searchbutton"></button>
+    <button onclick="
+    this.disabled = true;
+    fetchTerm(document.getElementById('searchinput').value);
+    " id="searchbutton"></button>
     <button onclick="fetchTerm(document.getElementById('searchinput').value)" id="resetsearch"></button>
 
     </section>
