@@ -77,5 +77,10 @@ function fetchTerm(term) {
     page++;
   });
 }
+// Tells me when things change and updates it
+new MutationObserver(updateLoadMore).observe(
+  document.getElementById("grid"),
+  { childList: true, subtree: true }
+);
 
 window.fetchTerm = fetchTerm;
