@@ -32,8 +32,13 @@ function fetchTerm(term) {
     .then(data => {
       const grid = document.getElementById("grid");
 
+      // https://housingbrowser.github.io/assets/sprites/404Balloon.png
       if (!data.houses?.length) {
-        grid.innerHTML += "<div class='404error'>404</div>";
+        grid.innerHTML +=  `
+        <div class='error404'>
+        <img src="https://housingbrowser.github.io/assets/sprites/404Balloon.png">
+        </div>
+        `;
         button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bup.png')";
         return;
       }
