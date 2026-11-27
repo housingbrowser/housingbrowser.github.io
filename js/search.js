@@ -22,8 +22,9 @@ async function getMinecraftUsername(uuid) {
 }
 
 function updateLoadMore() {
-  const loadMore = document.getElementById('loadmore');
-  loadMore.style.display = houses.length > 0 ? 'flex' : 'none';
+  const grid = document.getElementById("grid");
+  const count = grid.querySelectorAll(":scope > :not(.error404)").length;
+  document.getElementById("loadmore").style.display = count > 0 ? "flex" : "none";
 }
 
 
