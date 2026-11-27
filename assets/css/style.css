@@ -101,6 +101,12 @@ body {
   padding: 5px;
 }
 
+#wigitbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
 
 #searchbutton {
   background-image: url("/assets/buttons/search/searchusable.png");
