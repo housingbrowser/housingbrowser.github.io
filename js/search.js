@@ -32,6 +32,12 @@ function fetchTerm(term) {
     .then(data => {
       const grid = document.getElementById("grid");
 
+      if (!data.houses?.length) {
+        grid.innerHTML += "<div class='404error'>404</div>";
+        button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bup.png')";
+        return;
+      }
+
       for (const h of data.houses) {
         const box = document.createElement("div");
           box.className = "house";
