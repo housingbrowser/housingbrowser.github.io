@@ -167,3 +167,8 @@ body {
   -webkit-appearance: none;
   padding: 0;
 }
+
+#searchbutton:disabled {
+  background-image: url("/assets/buttons/search/searchused.png");
+  cursor: not-allowed;
+}
