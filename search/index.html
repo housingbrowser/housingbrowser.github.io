@@ -48,15 +48,15 @@
     </section>
     <section id="wigitbar">
 
-    <input type="search" placeholder="term">
-    <button>Search</button>
+    <input type="text" placeholder="term">
+    <button oneclick="fetchTerm(document.getElementById('player').value)">Search</button>
 
     </section>
     <section id="houses">
   <div class="grid" id="grid">
     <button
       id="loadmore"
-      onclick="fetchTrending()"
+      onclick="fetchTerm(document.getElementById('player').value)"
       style="
       display: flex;
       gap: 10px;
@@ -74,12 +74,7 @@
       box-shadow: none;
       ">
     </button>
-  <script type="module" src="/js/trending.js"></script>
-  <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    fetchTrending();
-  });
-  </script>
+  <script type="module" src="/js/search.js"></script>
   </section>
 </body>
 </html>

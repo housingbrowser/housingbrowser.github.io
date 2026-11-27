@@ -21,12 +21,12 @@ async function getMinecraftUsername(uuid) {
   }
 }
 
-function fetchTerm() {
+function fetchTerm(term) {
   // Define Variables
   button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bdown.png')";
 
   // Actual Function
-  fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/search?&page=${page}&limit=10`)
+  fetch(`https://host1.creepernet.qzz.io/c8ee103f/api/search?&term=${term}&page=${page}&limit=10`)
     .then(response => response.json())
     // Process the Data
     .then(data => {
