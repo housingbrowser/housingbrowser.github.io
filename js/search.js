@@ -36,7 +36,7 @@ function fetchTerm(term) {
       if (!data.houses?.length) {
         grid.innerHTML +=  `
         <div class='error404'>
-        <img src="https://housingbrowser.github.io/assets/sprites/404Balloon.png" style="height: 150px">
+        <img src="https://housingbrowser.github.io/assets/sprites/404Balloon.png" style="height: 145px">
         </div>
         `;
         button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bup.png')";
