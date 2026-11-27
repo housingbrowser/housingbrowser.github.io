@@ -21,6 +21,12 @@ async function getMinecraftUsername(uuid) {
   }
 }
 
+function updateLoadMore() {
+  const loadMore = document.getElementById('loadmore');
+  loadMore.style.display = houses.length > 0 ? 'flex' : 'none';
+}
+
+
 function fetchTerm(term) {
   // Define Variables
   button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bdown.png')";
@@ -40,6 +46,8 @@ function fetchTerm(term) {
         </div>
         `;
         button.style.backgroundImage = "url('https://housingbrowser.github.io/assets/buttons/load/bup.png')";
+        updateLoadMore();
+
         return;
       }
 
