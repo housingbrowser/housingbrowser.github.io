@@ -48,15 +48,15 @@
     </section>
     <section id="wigitbar">
 
-    <input type="text" placeholder="term">
-    <button oneclick="fetchTerm(document.getElementById('player').value)">Search</button>
+    <input type="text" placeholder="term" id=searchinput>
+    <button oneclick="fetchTerm(document.getElementById('searchinput').value)">Search</button>
 
     </section>
     <section id="houses">
   <div class="grid" id="grid">
     <button
       id="loadmore"
-      onclick="fetchTerm(document.getElementById('player').value)"
+      onclick="fetchTerm(document.getElementById('searchinput').value)"
       style="
       display: flex;
       gap: 10px;
